@@ -1,0 +1,25 @@
+.navbar
+{
+	border-radius: 0;
+}
+
+ .footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 50px;
+  background-color: #f5f5f5;
+}
+.footer nav
+{
+	margin-bottom: 0;
+}
+.jumbotron
+{
+	max-width: 80%;
+	margin: auto;
+	padding: 20px;
+	border-radius: 10px;
+	margin-bottom: 20px;
+}
