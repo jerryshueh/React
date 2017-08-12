@@ -3,6 +3,7 @@ import {BrowserRouter as Router, Route} from 'react-router-dom'
 import {LinkContainer} from 'react-router-bootstrap'
 import {Navbar, Nav, NavItem, FormGroup, ControlLabel, FormControl, HelpBlock, form, Jumbotron, ProgressBar} from 'react-bootstrap'
 import styles from './style.css';
+import { SocialIcon } from 'react-social-icons';
 
 const App = () => 
 (
@@ -49,7 +50,11 @@ const Footer = () =>
 (
   <footer className="footer">     
     <Navbar inverse collapseOnSelect>
-      
+      <SocialIcon url="facebook.com" />
+      <SocialIcon url="twitter.com" />
+      <SocialIcon url="google.com" />
+      <SocialIcon url="youtube.com" />
+      <SocialIcon url="vk.com" />
     </Navbar>
   </footer>
 )
