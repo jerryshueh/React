@@ -1,7 +1,7 @@
 import React from 'react'
 import {BrowserRouter as Router, Route} from 'react-router-dom'
 import {LinkContainer, IndexLinkContainer} from 'react-router-bootstrap'
-import {Navbar, Nav, NavItem, FormGroup, ControlLabel, FormControl, HelpBlock, form, Jumbotron, ProgressBar, Glyphicon} from 'react-bootstrap'
+import {Navbar, Nav, NavItem, FormGroup, ControlLabel, FormControl, HelpBlock, form, Jumbotron, ProgressBar, Glyphicon, Accordion, Panel} from 'react-bootstrap'
 import styles from './style.css';
 import { SocialIcon } from 'react-social-icons';
 
@@ -9,12 +9,11 @@ const App = () =>
 (
   <Router>
     <div>
-      <Route exact path="/" render={() => <Header /> } />
-      <Route exact path="/about" render={() => <Header /> } />
-      <Route exact path="/contact" render={() => <Header /> } />
+      <Route path="/" render={() => <Header /> } />
       <Route exact path="/" render={() => <Home /> } />
       <Route path="/about" render={() => <About />} />
       <Route path="/contact" render={() => <Contact />} />
+      <Route path="/info" render={() => <Info />} />
       <Route path="/" render={() => <Footer /> } />
     </div>
   </Router>
@@ -36,6 +35,9 @@ const Header = () =>
           </LinkContainer>
           <LinkContainer to="/contact">
             <NavItem>Contact</NavItem>
+          </LinkContainer>
+          <LinkContainer to="/info">
+            <NavItem>Q&A</NavItem>
           </LinkContainer>
         </Nav>
       </Navbar.Collapse>
@@ -112,6 +114,28 @@ const Contact = () =>
   </div>
 
 )
+const Info = () => (
+  <div>
+  <Jumbotron>
+  <Accordion>
+    <Panel bsStyle="danger" header="Question #1" eventKey="1">
+      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+    </Panel>
+    <Panel bsStyle="warning" header="Question #2" eventKey="2">
+      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+    </Panel>
+    <Panel bsStyle="info" header="Question #3" eventKey="3">
+      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+    </Panel>
+    <Panel bsStyle="success" header="Question #4" eventKey="4">
+      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+    </Panel>
+  </Accordion>
+  </Jumbotron>
+  </div>
+)
+
+
 // form example
 const FormExample = React.createClass({
   getInitialState() {
@@ -152,7 +176,5 @@ const FormExample = React.createClass({
     );
   }
 });
-
-
 
 export default App
