@@ -1,7 +1,7 @@
 import React from 'react'
 import {BrowserRouter as Router, Route} from 'react-router-dom'
 import {LinkContainer} from 'react-router-bootstrap'
-import {Navbar, Nav, NavItem, FormGroup, ControlLabel, FormControl, HelpBlock, form, Jumbotron, ProgressBar} from 'react-bootstrap'
+import {Navbar, Nav, NavItem, FormGroup, ControlLabel, FormControl, HelpBlock, form, Jumbotron, ProgressBar, Glyphicon} from 'react-bootstrap'
 import styles from './style.css';
 import { SocialIcon } from 'react-social-icons';
 
@@ -9,37 +9,34 @@ const App = () =>
 (
   <Router>
     <div>
-      <Route path="/" render={() => <Header /> } />
+      <Route exact path="/" render={() => <Header /> } />
+      <Route exact path="/about" render={() => <Header /> } />
+      <Route exact path="/contact" render={() => <Header /> } />
       <Route exact path="/" render={() => <Home /> } />
       <Route path="/about" render={() => <About />} />
-      <Route path="/contact" children={({match}) => match && <Contact />} />
+      <Route path="/contact" render={() => <Contact />} />
       <Route path="/" render={() => <Footer /> } />
     </div>
   </Router>
 )
-
 const Header = () => 
 (
   <div>    
     <Navbar inverse collapseOnSelect>
       <Navbar.Header>
-
         <Navbar.Toggle />
       </Navbar.Header>
       <Navbar.Collapse>
         <Nav>
-        <LinkContainer to="/">
-            <NavItem eventKey={1}>Home</NavItem>
+          <LinkContainer to="/">
+            <NavItem>Home</NavItem>
           </LinkContainer>
           <LinkContainer to="/about">
-            <NavItem eventKey={2}>About</NavItem>
+            <NavItem>About</NavItem>
           </LinkContainer>
           <LinkContainer to="/contact">
-            <NavItem eventKey={3}>Contact</NavItem>
+            <NavItem>Contact</NavItem>
           </LinkContainer>
-        </Nav>
-        <Nav >
-          
         </Nav>
       </Navbar.Collapse>
     </Navbar>
@@ -50,11 +47,24 @@ const Footer = () =>
 (
   <footer className="footer">     
     <Navbar inverse collapseOnSelect>
-      <SocialIcon url="facebook.com" />
-      <SocialIcon url="twitter.com" />
-      <SocialIcon url="google.com" />
-      <SocialIcon url="youtube.com" />
-      <SocialIcon url="vk.com" />
+      <Navbar.Header>
+        <Navbar.Toggle />
+      </Navbar.Header>
+        <Navbar.Collapse>
+          <Nav>
+            <div className="copyright">
+              <Glyphicon glyph="glyphicon glyphicon-copyright-mark" /> All rights reserved
+            </div>
+          </Nav>
+          <Nav pullRight>
+          <SocialIcon url="facebook.com" />
+          <SocialIcon url="twitter.com" />
+          <SocialIcon url="google.com" />
+          <SocialIcon url="youtube.com" />
+          <SocialIcon url="vk.com" />
+          <SocialIcon url="https://www.linkedin.com" />
+          </Nav>
+        </Navbar.Collapse>
     </Navbar>
   </footer>
 )
