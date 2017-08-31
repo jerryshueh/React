@@ -1,6 +1,6 @@
 import React from 'react'
 import {BrowserRouter as Router, Route} from 'react-router-dom'
-import {LinkContainer} from 'react-router-bootstrap'
+import {LinkContainer, IndexLinkContainer} from 'react-router-bootstrap'
 import {Navbar, Nav, NavItem, FormGroup, ControlLabel, FormControl, HelpBlock, form, Jumbotron, ProgressBar, Glyphicon} from 'react-bootstrap'
 import styles from './style.css';
 import { SocialIcon } from 'react-social-icons';
@@ -28,9 +28,9 @@ const Header = () =>
       </Navbar.Header>
       <Navbar.Collapse>
         <Nav>
-          <LinkContainer to="/">
+          <IndexLinkContainer to="/">
             <NavItem>Home</NavItem>
-          </LinkContainer>
+          </IndexLinkContainer>
           <LinkContainer to="/about">
             <NavItem>About</NavItem>
           </LinkContainer>
@@ -57,11 +57,11 @@ const Footer = () =>
             </div>
           </Nav>
           <Nav pullRight>
-          <SocialIcon url="facebook.com" />
-          <SocialIcon url="twitter.com" />
-          <SocialIcon url="google.com" />
-          <SocialIcon url="youtube.com" />
-          <SocialIcon url="vk.com" />
+          <SocialIcon url="http://facebook.com" />
+          <SocialIcon url="http://twitter.com" />
+          <SocialIcon url="http://google.com" />
+          <SocialIcon url="http://youtube.com" />
+          <SocialIcon url="http://vk.com" />
           <SocialIcon url="https://www.linkedin.com" />
           </Nav>
         </Navbar.Collapse>
