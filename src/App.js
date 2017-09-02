@@ -1,9 +1,18 @@
 import React from 'react'
 import {BrowserRouter as Router, Route} from 'react-router-dom'
 import {LinkContainer, IndexLinkContainer} from 'react-router-bootstrap'
-import {Navbar, Nav, NavItem, FormGroup, ControlLabel, FormControl, HelpBlock, form, Jumbotron, ProgressBar, Glyphicon, Accordion, Panel} from 'react-bootstrap'
+import {Navbar, Nav, NavItem, FormGroup, InputGroup, ControlLabel, Form, Checkbox, FormControl, HelpBlock, form, Jumbotron, ProgressBar, Glyphicon, Accordion, Panel, Button,Grid,Col,Row,Thumbnail} from 'react-bootstrap'
 import styles from './style.css';
 import { SocialIcon } from 'react-social-icons';
+import product from './images/product.png' // relative path to image 
+
+class Product extends React.Component { 
+    render() { 
+        return ( 
+            <img src={product} alt={"product"}/> 
+        )  
+    }
+}
 
 const App = () => 
 (
@@ -14,6 +23,8 @@ const App = () =>
       <Route path="/about" render={() => <About />} />
       <Route path="/contact" render={() => <Contact />} />
       <Route path="/info" render={() => <Info />} />
+      <Route path="/gallery" render={ () => <Gallery />} />
+      <Route path="/login" render={ () => <Login />} />
       <Route path="/" render={() => <Footer /> } />
     </div>
   </Router>
@@ -39,10 +50,135 @@ const Header = () =>
           <LinkContainer to="/info">
             <NavItem>Q&A</NavItem>
           </LinkContainer>
+          <LinkContainer to="/gallery">
+            <NavItem>Gallery</NavItem>
+          </LinkContainer>
+          <LinkContainer to="/login">
+            <NavItem>Login</NavItem>
+          </LinkContainer>
         </Nav>
+        <Navbar.Form pullRight>
+        <FormGroup>
+          <InputGroup>
+            <InputGroup.Addon><Glyphicon glyph="search" /></InputGroup.Addon>
+            <FormControl type="text" style={{width:'125px'}} placeholder="Search..." />
+          </InputGroup>
+        </FormGroup>
+        </Navbar.Form>
       </Navbar.Collapse>
     </Navbar>
   </div>
+)
+const Login = () => (
+  <Jumbotron>
+    <Form horizontal>
+      <FormGroup controlId="formHorizontalEmail">
+        <Col componentClass={ControlLabel} sm={2}>
+          Email
+        </Col>
+        <Col sm={10}>
+          <InputGroup>
+            <InputGroup.Addon><Glyphicon glyph="user" /></InputGroup.Addon>
+            <FormControl type="email" placeholder="Email" />
+          </InputGroup>
+        </Col>
+      </FormGroup>
+
+      <FormGroup controlId="formHorizontalPassword">
+        <Col componentClass={ControlLabel} sm={2}>
+          Password
+        </Col>
+        <Col sm={10}>
+          <InputGroup>
+            <InputGroup.Addon><Glyphicon glyph="lock" /></InputGroup.Addon>
+            <FormControl type="password" placeholder="Password" />
+          </InputGroup>
+        </Col>
+      </FormGroup>
+
+      <FormGroup>
+        <Col smOffset={2} sm={10}>
+          <LinkContainer to="/"><p>Forgot password?</p></LinkContainer>
+        </Col>
+      </FormGroup>
+
+      <FormGroup>
+        <Col smOffset={2} sm={10}>
+          <Button type="submit">
+            Sign in
+          </Button>
+        </Col>
+      </FormGroup>
+    </Form>
+  </Jumbotron>
+)
+const Gallery = () => (
+  <Grid>
+    <Row>
+      <Col xs={6} md={4}>
+        <LinkContainer to="/login">
+          <Thumbnail>
+            <h3>Product name</h3>
+            <Product />
+            <p>Description of the product</p>
+            <p>
+              <Button bsStyle="success">Buy</Button>&nbsp;
+            </p>
+          </Thumbnail>
+        </LinkContainer> 
+      </Col>
+      <Col xs={6} md={4}>
+        <LinkContainer to="/login">
+          <Thumbnail>
+            <h3>Product name</h3>
+            <Product />
+            <p>Description of the product</p>
+            <p>
+              <Button bsStyle="success">Buy</Button>&nbsp;
+            </p>
+          </Thumbnail>
+        </LinkContainer> 
+      </Col>
+      <Col xs={6} md={4}>
+        <LinkContainer to="/login">
+          <Thumbnail>
+            <h3>Product name</h3>
+            <Product />
+            <p>Description of the product</p>
+            <p>
+              <Button bsStyle="success">Buy</Button>&nbsp;
+            </p>
+          </Thumbnail>
+        </LinkContainer> 
+      </Col>
+      <Col xs={6} md={4}>
+        <LinkContainer to="/login">
+          <Thumbnail>
+            <h3>Product name</h3>
+            <Product />
+            <p>Description of the product</p>
+            <p>
+              <Button bsStyle="success">Buy</Button>&nbsp;
+            </p>
+          </Thumbnail>
+        </LinkContainer> 
+      </Col>
+      <Col xs={6} md={4}>
+        <LinkContainer to="/login">
+          <Thumbnail>
+            <h3>Product name</h3>
+            <Product />
+            <p>Description of the product</p>
+            <p>
+              <Button bsStyle="success">Buy</Button>&nbsp;
+            </p>
+          </Thumbnail>
+        </LinkContainer> 
+      </Col>
+
+      
+    </Row>
+  </Grid>
 )
 
 const Footer = () => 
@@ -61,9 +197,7 @@ const Footer = () =>
           <Nav pullRight>
           <SocialIcon url="http://facebook.com" />
           <SocialIcon url="http://twitter.com" />
-          <SocialIcon url="http://google.com" />
           <SocialIcon url="http://youtube.com" />
-          <SocialIcon url="http://vk.com" />
           <SocialIcon url="https://www.linkedin.com" />
           </Nav>
         </Navbar.Collapse>
