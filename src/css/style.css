@@ -2,6 +2,15 @@ body
 {
 	height: 100%;
 }
+.thumbnail{
+    text-decoration: none !important;
+    opacity: 0.5;
+    transition: all 0.5s;
+}
+.thumbnail:hover{
+	opacity: 1;
+    transition: all 0.5s;
+}
 #root
 {
 	margin-bottom: 70px;
@@ -9,7 +18,7 @@ body
 .navbar
 {
 	border-radius: 0;
-	font-size: 14pt;
+	font-size: 12pt;
 }
 
  .footer {
@@ -47,12 +56,34 @@ body
 {
 	padding-left: 28px;
 }
-
+.forgot
+{
+	color: red;
+	text-decoration: underline;
+	font-size: 11pt;
+	font-weight: 500;
+	transition: all 0.25s;
+}
+.forgot:hover, .forgot:visited
+{
+	color: blue;
+	transition: all 0.25s;
+}
+.paginations
+{
+margin: auto;}
 @media(max-width: 960px)
 {	
 	.jumbotron
 	{
 	max-width: 96%;
+	}
+}
+@media(max-width: 768px)
+{
+	.right-nav
+	{
+		margin-left: 5px;
 	}
 }
 @media(max-width: 640px)
