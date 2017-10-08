@@ -71,7 +71,16 @@ body
 }
 .paginations
 {
-margin: auto;}
+margin: auto;
+}
+.car
+{
+	margin-top: -20px;
+	width: 100%;
+	height: auto;
+	max-height: 550px;
+	overflow: hidden;
+}
 @media(max-width: 960px)
 {	
 	.jumbotron
@@ -92,4 +101,5 @@ margin: auto;}
 	{
 		width: 100%!important;
 	}
+	
 }

@@ -1,5 +1,4 @@
 import React from 'react'
-import {SocialIcon} from 'react-social-icons'
 import {LinkContainer} from 'react-router-bootstrap'
 import {Thumbnail, Grid,Row, Col, Button} from 'react-bootstrap'
 
@@ -17,6 +16,78 @@ class Product extends React.Component {
 const Gallery = () => (
   <Grid>
     <Row>
+      <Col xs={6} md={4}>
+        <LinkContainer to="/login">
+          <Thumbnail>
+            <h3>Product name</h3>
+            <Product />
+            <p>Description of the product</p>
+            <p>
+              <Button bsStyle="success">Buy</Button>&nbsp;
+            </p>
+          </Thumbnail>
+        </LinkContainer> 
+      </Col>
+      <Col xs={6} md={4}>
+        <LinkContainer to="/login">
+          <Thumbnail>
+            <h3>Product name</h3>
+            <Product />
+            <p>Description of the product</p>
+            <p>
+              <Button bsStyle="success">Buy</Button>&nbsp;
+            </p>
+          </Thumbnail>
+        </LinkContainer> 
+      </Col>
+      <Col xs={6} md={4}>
+        <LinkContainer to="/login">
+          <Thumbnail>
+            <h3>Product name</h3>
+            <Product />
+            <p>Description of the product</p>
+            <p>
+              <Button bsStyle="success">Buy</Button>&nbsp;
+            </p>
+          </Thumbnail>
+        </LinkContainer> 
+      </Col>
+      <Col xs={6} md={4}>
+        <LinkContainer to="/login">
+          <Thumbnail>
+            <h3>Product name</h3>
+            <Product />
+            <p>Description of the product</p>
+            <p>
+              <Button bsStyle="success">Buy</Button>&nbsp;
+            </p>
+          </Thumbnail>
+        </LinkContainer> 
+      </Col>
+      <Col xs={6} md={4}>
+        <LinkContainer to="/login">
+          <Thumbnail>
+            <h3>Product name</h3>
+            <Product />
+            <p>Description of the product</p>
+            <p>
+              <Button bsStyle="success">Buy</Button>&nbsp;
+            </p>
+          </Thumbnail>
+        </LinkContainer> 
+      </Col>
+      <Col xs={6} md={4}>
+        <LinkContainer to="/login">
+          <Thumbnail>
+            <h3>Product name</h3>
+            <Product />
+            <p>Description of the product</p>
+            <p>
+              <Button bsStyle="success">Buy</Button>&nbsp;
+            </p>
+          </Thumbnail>
+        </LinkContainer> 
+      </Col>
       <Col xs={6} md={4}>
         <LinkContainer to="/login">
           <Thumbnail>
