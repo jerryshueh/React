@@ -29,6 +29,7 @@ body
   overflow: hidden;
   /* Set the fixed height of the footer here */
   background-color: #f5f5f5;
+  z-index: 99;
 }
 .footer nav
 {
