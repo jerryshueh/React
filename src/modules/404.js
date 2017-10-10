@@ -21,7 +21,7 @@ const LoadingBar = createReactClass({
   render() {
     let bar;
     setTimeout((function() {
-      this.setState({ progress: this.state.progress + (0.4 * Math.random())});
+      this.setState({ progress: this.state.progress + (0.3 * Math.random())});
     }).bind(this), 10);
     if(this.state.progress <= 66)
     {
