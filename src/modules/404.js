@@ -6,8 +6,6 @@ const NotFound = () =>
 (
  <div>
   <Jumbotron>
-  <h1>Error 404 : Page not found...</h1>
-  <p> Under construction... </p>
   <LoadingBar />
   </Jumbotron>
   </div>
@@ -37,7 +35,7 @@ const LoadingBar = createReactClass({
         bar = <ProgressBar><ProgressBar style={{width:this.state.progress + "%"}} active bsStyle="success" /></ProgressBar>;
     }else
     {
-        bar = null;
+        bar = <h1>Error 404 : Page not found</h1>;
     }
     return (
       <div>

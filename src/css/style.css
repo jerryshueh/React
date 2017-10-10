@@ -43,6 +43,10 @@ body
 	border-radius: 10px;
 	margin-bottom: 20px;
 }
+.progress
+{
+	margin-top: 20px;
+}
 .social-icon
 {
 	margin: 5px 8px;
