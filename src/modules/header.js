@@ -1,6 +1,6 @@
 import React from 'react'
-import {LinkContainer, IndexLinkContainer} from 'react-router-bootstrap'
-import {Navbar,Nav,NavItem,Glyphicon,InputGroup,FormGroup, FormControl} from 'react-bootstrap'
+import {LinkContainer, IndexLinkContainer} from 'react-router-bootstrap';
+import {Navbar,Nav,NavItem} from 'react-bootstrap'; //,Glyphicon,InputGroup,FormGroup, FormControl
 
 const Header = () => (
   <div>    
@@ -27,7 +27,7 @@ const Header = () => (
           </LinkContainer>
         </Nav>
           
-          <Nav pullRight>
+          {/*<Nav pullRight>
             <Navbar.Form className="right-nav">
             <FormGroup>
               <InputGroup>
@@ -36,7 +36,7 @@ const Header = () => (
               </InputGroup>
             </FormGroup>
             </Navbar.Form>
-          </Nav>
+          </Nav>*/}
 
       </Navbar.Collapse>
     </Navbar>
