@@ -1,5 +1,9 @@
 import React from 'react';
 import {Carousel} from 'react-bootstrap';
+import slide1 from '../images/slider/1.jpg';
+import slide2 from '../images/slider/2.jpg';
+import slide3 from '../images/slider/3.jpg';
+
 import { Player, ControlBar, CurrentTimeDisplay, TimeDivider, VolumeMenuButton, BigPlayButton
 } from 'video-react';
 import "../../node_modules/video-react/dist/video-react.css";
@@ -11,13 +15,13 @@ const About = () =>
   <div>
   <Carousel className="car">
   <Carousel.Item>
-    <img alt="space_1" src="http://besthdwallpapers.org/wp-content/uploads/2017/07/landscape-nature-rice-paddy-terraces-mountain-sunset-field.jpg"/>
+    <img alt="space_1" src={slide1} />
   </Carousel.Item>
   <Carousel.Item>
-    <img alt="space_2" src="https://static.pexels.com/photos/68147/waterfall-thac-dray-nur-buon-me-thuot-daklak-68147.jpeg"/>
+    <img alt="space_2" src={slide2}/>
   </Carousel.Item>
   <Carousel.Item>
-    <img alt="space_3" src="https://i.ytimg.com/vi/QaYmdlpP4Ns/maxresdefault.jpg"/>
+    <img alt="space_3" src={slide3}/>
   </Carousel.Item>
   </Carousel>
   <br />
