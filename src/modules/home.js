@@ -1,49 +1,24 @@
 import React from 'react'
-import createReactClass from 'create-react-class'
-import {Jumbotron, ProgressBar} from 'react-bootstrap'
+import {Carousel} from 'react-bootstrap';
+import slide1 from '../images/slider/1.jpg';
+import slide2 from '../images/slider/2.jpg';
+import slide3 from '../images/slider/3.jpg';
 
 const Home = () =>
 (
  <div>
-  <Jumbotron>
-  <h1>Error 404 : Page not found...</h1>
-  <p> Under construction... </p>
-  <LoadingBar />
-  </Jumbotron>
+    <Carousel className="car">
+    <Carousel.Item>
+      <img alt="space_1" src={slide1} />
+    </Carousel.Item>
+    <Carousel.Item>
+      <img alt="space_2" src={slide2}/>
+    </Carousel.Item>
+    <Carousel.Item>
+      <img alt="space_3" src={slide3}/>
+    </Carousel.Item>
+    </Carousel>
   </div>
 )
 
-const LoadingBar = createReactClass({
-  getInitialState() 
-  {
-    return {
-      progress: 0
-    };
-  },
-  render() {
-    let bar;
-    setTimeout((function() {
-      this.setState({ progress: this.state.progress + (0.4 * Math.random())});
-    }).bind(this), 10);
-    if(this.state.progress <= 66)
-    {
-        bar = <ProgressBar><ProgressBar style={{width:this.state.progress + "%"}} active bsStyle="danger" /></ProgressBar>;
-    }
-    else if(this.state.progress <= 99)
-    {
-        bar = <ProgressBar><ProgressBar style={{width:this.state.progress + "%"}} active bsStyle="warning" /></ProgressBar>;
-    }else if(this.state.progress <= 122)
-    {
-        bar = <ProgressBar><ProgressBar style={{width:this.state.progress + "%"}} active bsStyle="success" /></ProgressBar>;
-    }else
-    {
-        bar = null;
-    }
-    return (
-      <div>
-        {bar}  
-      </div>  
-    );
-  }
-});
 export default Home;
